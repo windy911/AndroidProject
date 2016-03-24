@@ -9,38 +9,37 @@ import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
 import com.windy.androidplayer.R;
 import com.windy.androidplayer.utils.Mylog;
 
+import org.xutils.view.annotation.ViewInject;
+
 import java.util.HashMap;
-import java.util.Map;
 
 import javax.xml.transform.ErrorListener;
 import javax.xml.transform.TransformerException;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
 public class MainActivity extends BaseActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
 
-    @Bind(R.id.tvTest0)
+    @ViewInject(R.id.tvTest0)
     TextView tvText0;
-    @Bind(R.id.tvTest1)
+    @ViewInject(R.id.tvTest1)
     TextView tvText1;
-    @Bind(R.id.tvTest2)
+    @ViewInject(R.id.tvTest2)
     TextView tvText2;
-    @Bind(R.id.tvTest3)
+    @ViewInject(R.id.tvTest3)
     TextView tvText3;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+
         initView();
     }
 
@@ -69,7 +68,7 @@ public class MainActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @OnClick({R.id.tvTest0, R.id.tvTest1, R.id.tvTest2, R.id.tvTest3})
+
     public void OnViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tvTest0:

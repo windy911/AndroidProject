@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.windy.androidplayer.network.HttpService;
 
 /**
- * Created by windy on 15/8/19.
+ * Created by Rambo on 15/8/19.
  */
 public class BaseActivity extends Activity {
 
